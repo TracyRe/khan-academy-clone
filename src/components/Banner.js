@@ -3,7 +3,7 @@ import Button from './Button';
 import bannerImg from '../img/bannerImg.png'
 
 class Banner extends Component {
-
+  
   render(){
     const styles={
       display:'grid',
@@ -18,7 +18,7 @@ class Banner extends Component {
       gridRow: '1/span 3',
     }
     
-
+    
     const buttonRow={
       display: 'flex',
       flexFlow: 'row nowrap',
@@ -26,25 +26,26 @@ class Banner extends Component {
     }
     
     
-  return (
-    <div style={styles}>
-      <div style={image}>
-        <img style={{width:'100%'}}src={bannerImg}/>
+    return (
+      
+      
+      <div style={styles}>
+        <div style={image}>
+          <img style={{width:'100%'}}src={bannerImg}/>
+          </div>
+          <h1>For every student,
+          every classroom.
+          Real results.</h1>
+          <div>We’re a nonprofit with the mission to provide a free, world-class education for anyone, anywhere.</div>
+          <div style={buttonRow}>
+          {this.props.buttons.map((button, index)=> {
+            return <Button name={button.name} path={button.path} key={index} />
+            })
+          }
+        </div>
       </div>
-      <h1>For every student,
-      every classroom.
-      Real results.</h1>
-      <div>We’re a nonprofit with the mission to provide a free, world-class education for anyone, anywhere.</div>
-      <div style={buttonRow}>
-        <Button name='Learners'/>
-        <Button name='Teachers'/>
-        <Button name='Districts'/>
-        <Button name='Parents'/>
-      </div>
-
-    </div>
-  )  
-    
+    )  
+  
   }
 }
 

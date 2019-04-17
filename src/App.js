@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import Content from './components/Content';
+import Home from './components/Home';
+import District from './components/District';
 import SignUp from './components/Signup';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import logo from './img/logo.png';
 
 
 class App extends Component {
@@ -19,7 +19,8 @@ class App extends Component {
       <Router>
         <div>
           <Navbar/>
-          <Route exact path='/' component={Content}/>
+          <Route exact path='/' component={Home}/>
+          <Route path='/districts' component={District}/>
           <Route path='/signup' component={SignUp}/>
         </div>
       </Router>

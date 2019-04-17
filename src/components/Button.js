@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 
 class Button extends Component {
   render() {    
@@ -11,12 +13,18 @@ class Button extends Component {
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: '4px',
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      cursor: 'pointer',
+      fontSize: '1em'
     }
   
     return (
-      <div style={button}>
+      <div>
+      <Link to={this.props.path} style={{textDecoration:'none'}}>
+        <button style={button}>
         {this.props.name}
+        </button>
+      </Link>
       </div>
     );
   }

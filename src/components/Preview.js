@@ -4,15 +4,21 @@ import PreviewItem from './PreviewItem';
 import pl from '../img/pl.png';
 import tc from '../img/tc.png';
 import tet from '../img/tet.png';
+import mk12 from '../img/mk12.png';
+import shap from '../img/shap.png';
+import sat from '../img/sat.png';
 
 
 
 class Preview extends Component {
   render(){
     
+    
+    
+    
     return(
       <div>
-        <h1 style={{textAlign:'center'}} >Why Khan Academy works</h1>
+        <h1 style={{textAlign:'center'}} >{this.props.headline}</h1>
         <div style={{display:'flex',justifyContent:'space-around'}}>
           <PreviewItem img={pl} title="Personalized learning" text="Students practice at their own pace, first filling in gaps in their understanding and then accelerating their learning."/>
           <PreviewItem img={tc} title="Trusted content" text="Created by experts, Khan Academy’s library of trusted, standards-aligned practice and lessons covers math K-12 through early college, grammar, science, history, AP®, SAT®, and more. It’s all free for learners and teachers."/>
