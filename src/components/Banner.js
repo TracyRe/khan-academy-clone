@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Button from './Button';
-import bannerImg from '../img/bannerImg.png'
+
 
 class Banner extends Component {
   
@@ -31,12 +31,10 @@ class Banner extends Component {
       
       <div style={styles}>
         <div style={image}>
-          <img style={{width:'100%'}}src={bannerImg}/>
+          <img style={{width:'100%'}}src={this.props.img}/>
           </div>
-          <h1>For every student,
-          every classroom.
-          Real results.</h1>
-          <div>We’re a nonprofit with the mission to provide a free, world-class education for anyone, anywhere.</div>
+          <h1 style={{fontSize:'2.5rem'}} >{this.props.headline}</h1>
+          <div>{this.props.text}</div>
           <div style={buttonRow}>
           {this.props.buttons.map((button, index)=> {
             return <Button name={button.name} path={button.path} key={index} />
